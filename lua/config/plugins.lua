@@ -155,6 +155,13 @@ require("lazy").setup({
 
   -- AI Integration
   {
+    "github/copilot.vim",
+    config = function()
+      -- Copilot configuration can be added here if needed
+    end,
+  },
+
+  {
     "nomnivore/ollama.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
