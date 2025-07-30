@@ -111,10 +111,10 @@ keymap.set("n", "<Leader>u", ":UndotreeToggle<cr>", opts)
 -- Miniyank (handled in plugin config)
 
 -- Font size changes
-keymap.set("n", "<leader>1", ":Guifont! PragmataPro:h11<cr>", opts)
-keymap.set("n", "<leader>2", ":Guifont! PragmataPro:h14<cr>", opts)
-keymap.set("n", "<leader>3", ":Guifont! PragmataPro:h18<cr>", opts)
-keymap.set("n", "<leader>4", ":Guifont! PragmataPro:h26<cr>", opts)
+keymap.set("n", "<leader>1", ":set guifont=PragmataPro:h11<cr>", opts)
+keymap.set("n", "<leader>2", ":set guifont=PragmataPro:h14<cr>", opts)
+keymap.set("n", "<leader>3", ":set guifont=PragmataPro:h18<cr>", opts)
+keymap.set("n", "<leader>4", ":set guifont=PragmataPro:h26<cr>", opts)
 
 -- JSON formatting
 keymap.set("n", "<leader>j", ":execute '%!jq' | w<cr>", opts)
