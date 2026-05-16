@@ -38,7 +38,19 @@ require("lazy").setup({
   "fatih/vim-go",
 
   -- Color schemes
-  "javiorfo/nvim-soil",
+  {
+    "javiorfo/nvim-soil",
+    config = function()
+      require("soil").setup({
+        image = {
+          format = "svg",
+          execute_to_open = function(img)
+            return "xdg-open " .. img
+          end,
+        },
+      })
+    end,
+  },
   "javiorfo/nvim-nyctophilia",
   "nonsense/tomorrow-night-vim-theme",
   "glebtv/onehalf",
@@ -159,6 +171,13 @@ require("lazy").setup({
     config = function()
       -- Copilot configuration can be added here if needed
     end,
+  },
+
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = "cd app && npm install",
   },
 
   {

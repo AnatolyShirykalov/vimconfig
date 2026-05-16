@@ -119,6 +119,8 @@ keymap.set("n", "<leader>4", ":set guifont=PragmataPro:h26<cr>", opts)
 -- JSON formatting
 keymap.set("n", "<leader>j", ":execute '%!jq' | w<cr>", opts)
 keymap.set("n", "<leader>m", ":execute '%!jq --compact-output' | w<cr>", opts)
+keymap.set("v", "<leader>j", ":!jq<cr>", opts)
+keymap.set("v", "<leader>m", ":!jq --compact-output<cr>", opts)
 
 -- FZF
 keymap.set("", "<C-k>", ":FZF<CR>", opts)
