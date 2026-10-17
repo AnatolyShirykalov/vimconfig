@@ -45,7 +45,7 @@ require("lazy").setup({
         image = {
           format = "svg",
           execute_to_open = function(img)
-            return "xdg-open " .. img
+            return "chromium " .. img
           end,
         },
       })
@@ -160,6 +160,7 @@ require("lazy").setup({
   {
     "fatih/vim-go",
     config = function()
+      vim.env.PATH = vim.env.PATH .. ":" .. vim.fn.expand("~/go/bin")
       vim.g.go_fmt_command = "goimports"
       vim.g.go_info_mode = "guru"
     end,

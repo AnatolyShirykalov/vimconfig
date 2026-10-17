@@ -103,3 +103,5 @@ endfunction
 vim.api.nvim_create_user_command("DirTitle", function()
   DirTitle()
 end, {})
+-- GUI font (nvim-qt)
+vim.opt.guifont = "PragmataPro:h14"
